@@ -75,6 +75,18 @@ class SiteController extends Controller
         }
 
         $model = new LoginForm();
+//        var_dump($_POST);
+//        $_POST["LoginForm"]["username"]=$_COOKIE["username"];
+//        $_POST["LoginForm"]["password"]=$_COOKIE["password"];
+//        var_dump($_POST);exit();
+        header("Access-Control-Allow-Origin:*");
+        if(isset($_GET["username"]) && isset($_GET["password"])){
+            setcookie("data",$_GET["username"].'-'.$_GET["password"]);
+
+        }
+
+
+
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {

@@ -87,6 +87,7 @@ class SiteController extends Controller
         }
 
         $model = new LoginForm();
+
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
@@ -141,6 +142,7 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
+
     /**
      * Signs user up.
      *
@@ -149,7 +151,9 @@ class SiteController extends Controller
     public function actionSignup()
     {
         $model = new SignupForm();
+      $module = \Yii::$app->getModule('regist');
         if ($model->load(Yii::$app->request->post())) {
+            $module->re($_POST['SignupForm']["email"],$_POST['SignupForm']["password"],$_POST['SignupForm']["username"]);
             if ($user = $model->signup()) {
                 if (Yii::$app->getUser()->login($user)) {
                     return $this->goHome();

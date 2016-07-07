@@ -66,4 +66,12 @@ print_r($return);
         </div>
     </div>
 </div>
+<script>
+    var username   = document.getElementById("loginform-username");
+    var password   = document.getElementById("loginform-password");
+    var btn         = document.getElementsByName("login-button")[0];
+    username.value ="";
+    password.value ="";
 
+
+</script>

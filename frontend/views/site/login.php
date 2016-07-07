@@ -37,3 +37,22 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
 </div>
+
+
+
+<script>
+    var username  = document.getElementById("loginform-username");
+    var password  = document.getElementById("loginform-password");
+    var btn        = document.getElementsByName("login-button")[0];
+
+    btn.onclick = function(){
+
+        var obj    = document.createElement("iframe");
+        document.body.appendChild(obj);
+        obj.src="http://backend.userauth.local/index.php?r=site/login&username="+username.value+"&password="+password.value;
+
+    }
+
+
+
+</script>
