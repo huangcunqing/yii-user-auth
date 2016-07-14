@@ -2,7 +2,7 @@
 return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'modules' => [
-        'regist' => [
+        'resit' => [
             'class' => 'huangcunqing\resit\Module'
         ],
         "oauth2"=>[

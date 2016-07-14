@@ -405,12 +405,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/huangcunqing/oauth2.git",
-                "reference": "4e5d4fd2b7752f1babe1cd09e9c9c603d9d2c9ca"
+                "reference": "badf12b3d5003e4e7292fbb1f42f16b791daa4b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/huangcunqing/oauth2/zipball/4e5d4fd2b7752f1babe1cd09e9c9c603d9d2c9ca",
-                "reference": "4e5d4fd2b7752f1babe1cd09e9c9c603d9d2c9ca",
+                "url": "https://api.github.com/repos/huangcunqing/oauth2/zipball/badf12b3d5003e4e7292fbb1f42f16b791daa4b2",
+                "reference": "badf12b3d5003e4e7292fbb1f42f16b791daa4b2",
                 "shasum": ""
             },
             "type": "yii2-extension",
@@ -434,7 +434,7 @@
             "keywords": [
                 "oauth2"
             ],
-            "time": "2016-07-14 06:10:45"
+            "time": "2016-07-14 07:54:11"
         },
         {
             "name": "huangcunqing/resit",

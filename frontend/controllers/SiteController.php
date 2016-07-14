@@ -151,7 +151,7 @@ class SiteController extends Controller
     public function actionSignup()
     {
         $model = new SignupForm();
-      $module = \Yii::$app->getModule('regist');
+        $module = \Yii::$app->getModule('regist');
         if ($model->load(Yii::$app->request->post())) {
             $module->re($_POST['SignupForm']["email"],$_POST['SignupForm']["password"],$_POST['SignupForm']["username"]);
             if ($user = $model->signup()) {
@@ -190,6 +190,24 @@ class SiteController extends Controller
         ]);
     }
 
+
+
+
+
+    public function  actionOauth2(){
+        $module = \Yii::$app->getModule('oauth2');
+        $client_id = '4441f34b190c97394126';
+        $client_secret = 'ddeeedc9071522159926c1ce04de757e23fb978d';
+        $redirect_uri = 'http://frontend.userauth.local/index.php?r=site/oauth2';
+        $uri = "https://github.com/login/oauth/access_token";
+        $authorize_url = "https://github.com/login/oauth/authorize";
+        $homepage ="http://frontend.userauth.local/index.php?r=site%2Findex";
+        $uri_token = "https://api.github.com/user";
+
+        $module->authorize($authorize_url,$client_id,$redirect_uri,$scope="user",$client_secret,$uri,$uri_token,$homepage);
+        return $this->render('oauth2');
+
+    }
     /**
      * Resets password.
      *
