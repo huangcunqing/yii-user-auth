@@ -4,6 +4,9 @@ return [
     'modules' => [
         'regist' => [
             'class' => 'huangcunqing\resit\Module'
+        ],
+        "oauth2"=>[
+            'class' => 'huangcunqing\oauth2\Module'
         ]
     ],
 

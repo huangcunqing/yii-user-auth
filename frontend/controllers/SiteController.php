@@ -166,6 +166,7 @@ class SiteController extends Controller
         ]);
     }
 
+
     /**
      * Requests password reset.
      *
